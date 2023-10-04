@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+  //scroll to
+  $('.scroll-link').on('click', function(event) {
+    event.preventDefault();
+
+    // Get the target ID from the link's href attribute
+    const targetId = $(this).attr('href').substring(1);
+
+    // Scroll to the target element with smooth animation
+    $('html, body').animate({
+        scrollTop: $('#' + targetId).offset().top
+    }, 1000); // Adjust the animation speed (1000ms = 1 second) as needed
+}); 
   
   // Back to top button
   $(window).scroll(function() {
@@ -16,7 +28,7 @@ $(document).ready(function() {
 
   // Header fixed on scroll
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 250) {
+    if ($(this).scrollTop() > 150) {
       $('#header').addClass('header-scrolled');
     } else {
       $('#header').removeClass('header-scrolled');
@@ -53,6 +65,7 @@ $(document).ready(function() {
 
   // Mobile Navigation
   if ($('#nav-menu-container').length) {
+    
     var $mobile_nav = $('#nav-menu-container').clone().prop({
       id: 'mobile-nav'
     });
@@ -91,6 +104,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
       if ($(this).scrollTop() > 50) {
         $('#mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
+
       } else {
         $('#mobile-nav-toggle').removeClass('mobile-nav-toggle-scrolled');
       }
@@ -101,7 +115,9 @@ $(document).ready(function() {
     }
 
   } else if ($("#mobile-nav, #mobile-nav-toggle").length) {
+    console.log('ok')
     $("#mobile-nav, #mobile-nav-toggle").hide();
+    
   }
 
   // Smooth scroll for the menu and links with .scrollto classes

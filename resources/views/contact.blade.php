@@ -21,8 +21,8 @@ Group Home menyajikan hunian yang intim dan kekeluargaan, dengan fokus pada inte
           Banten 15412 <br>
           WhatsApp: 0813-9979-5339 <br> 
           Email: grouphome@rukunseniorliving.com</p>
-        <span class="book-now">
-          <p>RESERVE YOUR ROOM</p>
+        <span>
+          <a href="https://api.whatsapp.com/send?phone=6281399795339" target="_blank">RESERVE YOUR ROOM</a>
         </span>
       </div>
     </div>
